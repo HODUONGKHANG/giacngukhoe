@@ -12,38 +12,36 @@ body{
     justify-content:center;
     align-items:center;
     font-family:Arial;
-    background:#0f172a;
+    background:#f4f6f8;
 }
 
 .card{
     width:360px;
     text-align:center;
-    color:white;
 }
 
 h1{
     margin:0;
-    font-size:26px;
+    font-size:24px;
     letter-spacing:1px;
-    color:#f5c542;
+    color:#333;
 }
 
 .desc{
     font-size:13px;
-    color:#aaa;
-    margin:10px 0 20px;
+    color:gray;
+    margin:10px 0 18px;
     line-height:1.4;
 }
 
 select{
     width:100%;
     padding:10px;
-    border:none;
     border-radius:10px;
+    border:1px solid #ddd;
     margin-top:10px;
-    background:#1e293b;
-    color:white;
     text-align:center;
+    background:white;
 }
 
 .time{
@@ -61,7 +59,7 @@ label{
     display:block;
     margin-top:15px;
     font-size:14px;
-    color:#ddd;
+    color:#444;
 }
 
 button{
@@ -70,9 +68,9 @@ button{
     width:60%;
     border:none;
     border-radius:10px;
-    background:#f5c542;
+    background:#333;
+    color:white;
     cursor:pointer;
-    font-weight:bold;
 }
 
 .result{
@@ -84,17 +82,17 @@ button{
     width:70%;
     padding:8px;
     border-radius:8px;
-    background:#1e293b;
+    background:rgba(0,0,0,0.05);
 }
 
-.good{color:#22c55e;font-weight:bold;}
+.good{color:#16a34a;font-weight:bold;}
 .ok{color:#f59e0b;font-weight:bold;}
 .bad{color:#ef4444;font-weight:bold;}
 
 .note{
     margin-top:10px;
     font-size:12px;
-    color:#888;
+    color:gray;
 }
 </style>
 </head>
@@ -106,7 +104,7 @@ button{
 <h1>GIẤC NGỦ KHỎE</h1>
 
 <div class="desc">
-Tối ưu giấc ngủ để bạn tỉnh táo hơn và bắt đầu ngày mới nhẹ nhàng.
+Tối ưu giấc ngủ để bạn tỉnh táo và bắt đầu ngày mới nhẹ nhàng hơn.
 </div>
 
 <select id="mode">
@@ -141,7 +139,9 @@ for(let i=0;i<60;i++){
 
 document.getElementById("mode").onchange=function(){
     document.getElementById("labelText").innerText =
-    this.value==="wake"?"Nhập giờ muốn thức dậy":"Nhập giờ muốn đi ngủ";
+    this.value==="wake"
+    ? "Nhập giờ muốn thức dậy"
+    : "Nhập giờ muốn đi ngủ";
 }
 
 function calc(){
